@@ -318,3 +318,30 @@ Springcloud中服务间两种RESTFul调用方式
 - 在被调用的类或方法上加上@CrossOrigin注解
 - 在Zuul里增加CorsFilter过滤器
 
+## Springcloud Hystrix
+
+- 防雪崩利器
+- 基于Netflix对应的Hystrix
+
+### 功能
+#### 服务降级
+- 优先核心服务，非核心服务不可用或弱可用
+- 通过HystrixCommand注解指定
+- fallbackMethod（回退函数）中具体实现降级逻辑
+
+### 依赖隔离
+- 线程池隔离
+- Hystrix自动实现了依赖隔离
+
+### 服务熔断
+circuitBreaker.requestVolumeThreshold
+circuitBreaker.sleepWindowInMilliseconds
+circuitBreaker.errorThresholdPercentage
+
+- Circuit Breaker：断路器
+![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/25.jpg)
+
+### 监控（Hystrix Dashboard)
+
+![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/26.jpg)
+
