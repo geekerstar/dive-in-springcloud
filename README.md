@@ -89,3 +89,55 @@
 ### Springcloud的服务调用方式
 - REST
 - Node.js的eureka-js-client
+
+## 服务拆分 - 起点和终点？
+起点：
+
+- 既有架构的形态
+
+终点：
+
+- 好的架构不是设计出来的，而是进化而来的
+- 一直在演进
+
+## 适合上微服务吗？
+业务形态不适合的
+- 系统中包含很多强事务场景的
+- 业务相对稳定，迭代周期长
+- 访问压力不大，可用性要求不高
+
+## 康威定律
+任何组织在设计一套系统（广义概念上的系统）时，所交付的设计方案在结构上都与该组织的沟通结构保持一致
+
+## 微服务和团队结构
+微服务的特点
+- 一系列微小的服务共同组成
+- 单独部署，跑在自己的进程里
+- 每个服务为独立的业务开发
+- 分布式的管理
+
+![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/9.jpg)
+
+## 服务拆分的方法论
+扩展立方模型（Scale Cube)
+- X轴 水平复制
+- Z轴 数据区分
+- Y轴 功能解耦
+
+![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/10.png)
+
+如何拆"功能"
+- 单一职责，松耦合，高内聚
+- 关注分离点（按职责、通用性、粒度级别）
+
+服务和数据的关系：
+- 先考虑业务功能，再考虑数据
+- 无状态服务
+
+![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/11.png)
+
+## 点餐业务服务拆分分析
+
+![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/12.png)
+
+
