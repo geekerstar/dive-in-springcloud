@@ -50,4 +50,42 @@
 - 后端通用服务（也称中间层服务Middle Tier Service）
 - 前端服务（也称边缘服务Edge Service)
 
+## SpringCloud Eureka
+基于Netflix Eureka做了二次封装
 
+![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/7.png)
+
+
+两个组件
+
+ - Eureka Server 注册中心
+ - Eureka Client 服务注册
+
+## Eureka Server 高可用
+![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/6.png)
+
+## Eureka总结
+- @EnableEurekaServer
+- @EnableEurekaClient
+- 心跳检测、健康检查、负载均衡等功能
+- Eureka高可用，生产上建议至少两台以上
+- 分布式系统中，服务注册中心是最重要的基础部分
+
+## 分布式系统中为什么需要服务发现？
+
+![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/8.png)
+
+
+## 服务发现的两种方式
+- 客户端发现（Eureka)
+- 服务端发现（Nginx、Zookeeper、Kubernetes）
+
+
+### 微服务的特点：异构
+
+- 不同语言
+- 不同类型的数据库
+
+### Springcloud的服务调用方式
+- REST
+- Node.js的eureka-js-client
