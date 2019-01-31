@@ -220,5 +220,43 @@ Springcloud中服务间两种RESTFul调用方式
 
 ![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/16.png)
 
+## 异步
+客户端请求不会阻塞进程，服务端的响应可以是非即时的
 
+### 异步的常见形态
+- 通知
+- 请求/异步响应
+- 消息
 
+### MQ使用场景
+- 异步处理
+- 流量削峰
+- 日志处理
+- 应用解耦
+
+## Spring cloud Stream
+
+![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/17.png)
+
+## 原始流程
+- 1、查询商品信息（调用商品服务）
+- 2、计算总价（生成订单详情）
+- 3、商品服务扣库存（调用商品服务）
+- 4、订单入库（生成订单）
+
+### 异步扣库存分析
+![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/18.png)
+![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/19.png)
+
+- 可靠的消息投递
+- 用户体验的变化
+
+### 具体操作
+
+- 1、库存在Redis中保存
+- 2、收到请求Redis判断是否库存充足，减掉Redis中库存
+- 3、订单服务创建订单写入数据库，并发送消息
+
+## 异步和消息处理
+- 数据一致性
+- Dubbo+Zookeeper和Springcloud
