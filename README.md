@@ -126,13 +126,18 @@
 
 ![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/10.png)
 
-如何拆"功能"
+如何拆"功能"？
 - 单一职责，松耦合，高内聚
 - 关注分离点（按职责、通用性、粒度级别）
 
 服务和数据的关系：
 - 先考虑业务功能，再考虑数据
 - 无状态服务
+
+如何拆"数据"？
+- 每个微服务都有单独的数据存储
+- 依据服务特点选择不同结构的数据库类型
+- 难点在确定边界（针对边界设计API、依据边界权衡数据冗余）
 
 ![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/11.png)
 
