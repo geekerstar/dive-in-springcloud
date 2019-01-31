@@ -260,3 +260,38 @@ Springcloud中服务间两种RESTFul调用方式
 ## 异步和消息处理
 - 数据一致性
 - Dubbo+Zookeeper和Springcloud
+
+## 服务网关
+### 为什么需要服务网关
+![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/20.png)
+
+### 服务网关的要素
+- 稳定性和高可用
+- 性能和并发性
+- 安全性
+- 扩展性
+
+### 常用的网关方案
+- Nginx+Lua
+- Kong
+- Tyk
+- Springcloud Zuul
+
+### Zuul的特点
+- 路由+过滤器=Zuul
+- 核心是一系列的过滤器
+
+### Zuul的四种过滤器API
+- 前置（Pre)：限流、鉴权、参数校验调整
+- 后置（Post）：统计、日志
+- 路由（Route）
+- 错误（Error）
+
+![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/21.jpg)
+
+### 请求生命周期
+![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/22.jpg)
+
+### Zuul的高可用
+- 多个Zuul节点注册到Eureka Server
+- Nginx和Zuul"混搭"
