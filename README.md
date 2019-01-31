@@ -203,11 +203,22 @@ Springcloud中服务间两种RESTFul调用方式
 
 ![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/14.png)
 
-## 微服务和容器 - 天生一对
+### 微服务和容器 - 天生一对
 
 - 从系统环境开始，自底至上打包应用
 - 轻量级，对资源的有效隔离和管理
 - 可复用，版本化
 
 ![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/15.png)
+
+## 统一配置中心
+为什么需要统一配置中心？
+
+- 不方便维护
+- 配置内容安全与权限
+- 更新配置项目需要重启
+
+![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/16.png)
+
+
 
