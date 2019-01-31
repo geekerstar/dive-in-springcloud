@@ -295,3 +295,26 @@ Springcloud中服务间两种RESTFul调用方式
 ### Zuul的高可用
 - 多个Zuul节点注册到Eureka Server
 - Nginx和Zuul"混搭"
+
+## Zuul综合使用
+![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/23.png)
+
+### Zuul限流
+- 时机：请求被转发之前调用
+
+#### 令牌桶算法
+![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/24.jpg)
+
+### Zuul权限校验
+- /order/create 只能买家访问
+- /order/finish 只能卖家访问
+- /product/list 都可以访问
+
+#### 解决方案
+- 在前置过滤器中实现相关逻辑
+- 分布式Session 或 OAuth2
+
+### Zuul跨域问题
+- 在被调用的类或方法上加上@CrossOrigin注解
+- 在Zuul里增加CorsFilter过滤器
+
