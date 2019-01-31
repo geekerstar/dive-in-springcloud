@@ -345,3 +345,41 @@ circuitBreaker.errorThresholdPercentage
 
 ![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/26.jpg)
 
+## 链路监控
+- SpringCloud Sleuth
+
+### 集成步骤
+- 引入依赖
+- 启动 ZipKin Server
+- 配置参数
+
+## 分布式追踪系统
+核心步骤
+- 数据采集
+- 数据存储
+- 查询展示
+
+### OpenTracing
+- 优势：来自大名鼎鼎的CNCF
+- ZIPKIN、TRACER、JAEGER、GRPC
+
+
+### Annotation
+事件类型：
+- cs(Client Send)：客户端发起请求的时间
+- cr(client Received)：客户端收到处理完请求的时间
+- ss(Server Send)：服务端处理完逻辑的时间
+- sr(Server Received)：服务端收到调用端请求的时间
+
+客户端调用时间=cr-cs
+
+服务端处理时间=sr-ss
+
+### ZipKin
+![](https://github.com/geekerstar/dive-in-springcloud/blob/master/img/27.jpg)
+
+几个关键概念
+- traceId
+- spanId
+- parentId
+
